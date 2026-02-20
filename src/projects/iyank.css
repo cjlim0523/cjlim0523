@@ -1,0 +1,258 @@
+/* ===============================
+   PAGE WRAPPER & SCOPED STYLES
+ =============================== */
+.iyank {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 8rem;
+    animation: iyankFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes iyankFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   HERO COVER (Scoped)
+=============================== */
+.iyank .hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.iyank .hero-img {
+    width: 100%;
+    height: 123%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.iyank .hero:hover .hero-img {
+    transform: scale(1.02);
+}
+
+.iyank .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 60%);
+}
+
+.iyank .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.iyank .hero .page-title {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.iyank .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: 600px;
+    font-weight: 600;
+}
+
+.iyank .back-link {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid var(--glass-border);
+}
+
+.iyank .back-link:hover {
+    color: var(--primary);}
+
+/* ===============================
+   SECTIONS (Scoped)
+=============================== */
+.iyank .section {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 3.5rem;
+    margin-bottom: 4rem;
+    border: 1px solid var(--glass-border);
+}
+
+.iyank .section h2 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.iyank .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.iyank .section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 70ch;
+}
+
+.iyank .section ul,
+.iyank .section ol {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.iyank .section li {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.iyank .section li::marker {
+    color: var(--primary);
+}
+
+.iyank .section strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ===============================
+   SIMPLIFIED STACKS (Grid Layout) (Scoped)
+=============================== */
+.iyank .stack-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.iyank .stack-group {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1.5rem;
+}
+
+.iyank .stack-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.iyank .stack-label {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.iyank .stack-list {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 !important;
+}
+
+.iyank .stack-tag {
+    background: #f8fafc;
+    color: var(--text-muted);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border: 1px solid var(--glass-border);
+    transition: all 0.2s;
+}
+
+.iyank .stack-tag:hover {
+    color: var(--primary);color: var(--primary);
+    border-color: var(--primary);
+
+}
+
+/* ===============================
+   IMAGES (Scoped)
+=============================== */
+.iyank .section img {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 2rem;
+    border: 1px solid var(--glass-border);
+}
+
+/* ===============================
+   RESPONSIVE (Scoped)
+=============================== */
+@media (max-width: 768px) {
+    .iyank {
+        padding: 1rem;
+    }
+
+    .iyank .hero {
+        height: 35vh;
+        border-radius: 16px;
+    }
+
+    .iyank .hero .page-title {
+        font-size: 2.5rem;
+    }
+
+    .iyank .hero-overlay {
+        padding: 1.5rem;
+    }
+
+    .iyank .section {
+        padding: 2rem;
+    }
+
+    .iyank .stack-group {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+}

@@ -1,0 +1,36 @@
+:root {
+    /* Global Theme Variables - White Minimalist */
+    --bg-white: #ffffff;
+    --bg-card: #ffffff;
+    --primary: #53AAE2;
+    --secondary: #051766;
+    --accent: #051766;
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --glass-border: #e5e7eb;
+
+    /* Fonts */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Resume Specific Overrides */
+    --resume-bg: var(--bg-white);
+    --resume-text-main: #111111;
+    --resume-text-muted: #666666;
+    --resume-accent: var(--primary);
+    --resume-border: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
