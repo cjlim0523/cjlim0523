@@ -153,15 +153,15 @@ export default function Home() {
                             <h3>Awards</h3>
                             <ul className="custom-list">
                                 <li>
-                                    <Link to="/award/military" className="list-link">
-                                        <img src="./project/osamthumbnail.webp" alt="award1" className="list-thumb" />
-                                        <span>군장병 SW 장려상</span>
+                                    <Link to="/award/hecto" className="list-link">
+                                        <img src="./project/hecto.jpg" alt="award1" className="list-thumb" />
+                                        <span>헥토 SW 아카데미 은상</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/award/hecto" className="list-link">
-                                        <img src="./project/hecto.jpg" alt="award2" className="list-thumb" />
-                                        <span>헥토 SW 아카데미 은상</span>
+                                    <Link to="/award/military" className="list-link">
+                                        <img src="./project/osamthumbnail.webp" alt="award2" className="list-thumb" />
+                                        <span>군장병 SW 장려상</span>
                                     </Link>
                                 </li>
                             </ul>

@@ -56,8 +56,18 @@ export default function Hecto() {
 
                 <div className="cert-container">
                     <img
-                        src="./project/hecto.jpg"
-                        alt="Hecto Award Certificate"
+                        src="/award/헥토1.png"
+                        alt="Hecto Award 1"
+                        className="award-img"
+                    />
+                    <img
+                        src="/award/헥토2.jpeg"
+                        alt="Hecto Award 2"
+                        className="award-img"
+                    />
+                    <img
+                        src="/award/헥토3.jpeg"
+                        alt="Hecto Award 3"
                         className="award-img"
                     />
                 </div>
